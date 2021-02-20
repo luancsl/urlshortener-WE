@@ -32,7 +32,7 @@ src                   pasta raiz
 ## Informações
 
 - Para modificar o tempo limpeza de url curtas amazenadas no banco deve alterar a constante BD_CLEANING_TIME em **index.js** em **src**
-- A geração dos short codes se dá a partir da funcçao shortCodeGen() em **util**
+- A geração dos short codes se dá a partir da funçao shortCodeGen() em **util**
 - O método de geração dos short codes é baseado em um datatime do momento presente com adição de um fator aleatorio 
 - Os short codes gerados são utilizados como id de objetos salvos no banco de dado 
 
