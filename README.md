@@ -6,7 +6,7 @@ Url de documentação: https://app.swaggerhub.com/apis/luancsl/urlshortened-WE/1
 
 
 ## Estrutura
-O projeto seguiu a [arquitetura limpa](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture) e a estrutura das pastas está como se segue:
+O projeto seguiu um padrão de [arquitetura limpa](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture) e a estrutura das pastas segue como está:
 
 ```
 src                   pasta raiz
@@ -32,19 +32,19 @@ src                   pasta raiz
 
 ## Informações
 
-- Para modifcar modificar o tempo limpeza de url curtas amazenadas no banco deve alterar a constante BD_CLEANING_TIME em index.js na pasta raiz
-- A geração dos short codes se dá a partir da funcçao shortCodeGen() em util
-- O método de geração dos short codes é baseado em um datatime do momento presente com adição um fator aleatorio 
-- Os short codes gerados são utilizados para id dos objetos salvos no banco de dados
+- Para modificar o tempo limpeza de url curtas amazenadas no banco deve alterar a constante BD_CLEANING_TIME em **index.js** em **src**
+- A geração dos short codes se dá a partir da funcçao shortCodeGen() em **util**
+- O método de geração dos short codes é baseado em um datatime do momento presente com adição de um fator aleatorio 
+- Os short codes gerados são utilizados como id de objetos salvos no banco de dado 
 
 ## Instalação
 
-Para local:
+Com docker:
 ```
 docker-compose up
 ```
 
-Para testes:
+Testes:
 ```
 npm teste
 ```
