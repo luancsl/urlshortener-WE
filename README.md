@@ -1,9 +1,8 @@
 # UrlShortener-WE
 Projeto encurtador de url para Wiser Educação
 
-Url da aplicação: http://rocky-plateau-58551.herokuapp.com\
+Url da aplicação: http://rocky-plateau-58551.herokuapp.com \
 Url de documentação: https://app.swaggerhub.com/apis/luancsl/urlshortened-WE/1.0.0
-
 
 ## Estrutura
 O projeto seguiu um padrão de [arquitetura limpa](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture) e a estrutura das pastas segue como está:
