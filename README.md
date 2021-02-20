@@ -19,7 +19,7 @@ src                   pasta raiz
   -helper             
   -infrastructure     bibliotecas e códigos de terceiros
   -main               
-    -adapter          adaptores de codigo terceiros
+    -adapter          adaptores para códigos de terceiros
     -config           
     -factory          criadores de objetos 
     -model            esquemas de orm utilizado
