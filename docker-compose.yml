@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: shortenedUrl-app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    restart: always
+    working_dir: /home/node/app
+    command: npm run prod
+    environment:
+      - POSTGRES_URL=postgres://postgres:postgres@postgres:5432/shortenedUrl-app
+      - POSTGRES_PORT=5432
+      - SERVER_PORT=3001
+      - PORT=3001
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./package.json:/home/node/app/package.json
+      - ./src:/home/node/app/src
+    links:
+      - postgres
