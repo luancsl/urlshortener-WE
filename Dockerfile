@@ -17,4 +17,4 @@ USER node
 
 EXPOSE 3001 27020
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "prod"]

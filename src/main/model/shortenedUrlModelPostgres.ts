@@ -1,10 +1,21 @@
 import { Sequelize, DataTypes, ModelAttributes, Model, Optional, Op } from "sequelize";
 
-export const sequelize = new Sequelize(process.env.POSTGRES_URL, {
+const optionsProd = {
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        }
+    },
+}
+
+const optionsLocal = {
     dialectOptions: {
         ssl: false
-    }
-});
+    },
+}
+
+export const sequelize = new Sequelize(process.env.DATABASE_URL, process.env.MODE ? optionsLocal : optionsProd);
 
 export interface IShortenedUrlPostgresModel extends Model {
     _id: string;

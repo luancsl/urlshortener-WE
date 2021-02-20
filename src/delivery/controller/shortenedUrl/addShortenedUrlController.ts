@@ -32,7 +32,7 @@ export class AddShortenedUrlController implements Controller {
             const protoc = httpRequest.protocol;
             const host = httpRequest.hostname;
             const port = config.SERVER_PORT;
-            const uri = `${protoc}://${host}:${port}`
+            const uri = process.env.MODE == "Local" ? `${protoc}://${host}:${port}` : `${protoc}://${host}`
             return okay(shortenedUrlToJsonOldRoutePresenter(uri, result));
         }).catch(error => {
             return badRequest(error);

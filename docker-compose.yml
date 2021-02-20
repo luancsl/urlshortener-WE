@@ -15,10 +15,8 @@ services:
     working_dir: /home/node/app
     command: npm run prod
     environment:
-      - POSTGRES_URL=postgres://postgres:postgres@postgres:5432/shortenedUrl-app
-      - POSTGRES_PORT=5432
-      - SERVER_PORT=3001
-      - PORT=3001
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/shortenedUrl-app
+      - MODE=Local
     ports:
       - "3001:3001"
     volumes:
